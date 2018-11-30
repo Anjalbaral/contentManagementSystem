@@ -1,2 +1,2 @@
 # contentManagementSystem
-simple web based content management system with admin panel
+this is a simple web based content management system with admin panel
