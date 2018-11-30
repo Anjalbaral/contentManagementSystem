@@ -1,0 +1,6 @@
+  SET @autoid:=0;
+  UPDATE blogdetails set id= @autoid := (@autoid+1);
+  ALTER TABLE blogdetails Auto_increment=1;
+
+  for D2 input
+  nl2br

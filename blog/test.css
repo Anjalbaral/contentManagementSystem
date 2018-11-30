@@ -1,0 +1,141 @@
+body {
+  overflow-x: hidden;
+  margin:0;
+  padding:0;
+}
+.navbar #menu-toggler
+{
+color: white;
+}
+.navbar #menu-toggler:hover
+{
+ color: lightblue;
+}
+#wrapper {
+  padding-left: 0;
+  /*-webkit-transition: all 0s ease;
+  -moz-transition: all 0s ease;
+  -o-transition: all 0s ease;
+  transition: all 0s ease;*/
+}
+#wrapper.toggled {
+  padding-left: 250px;
+}
+#sidebar-wrapper
+{
+	z-index: 1;
+	position: absolute;
+	width: 0px;
+	height: 100%;
+	margin-left: -250px;
+	overflow-y: hidden;
+	background-color: #2c3e50;
+	border-style: 2px solid red;
+	opacity: 0.9;
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/*main content*/
+
+
+/*changing the width of sidebr*/
+#wrapper.toggled #sidebar-wrapper
+{
+  width: 250px;
+
+}
+#main-content
+{
+	width: 100%;
+	/*position: absolute;*/
+	padding: 10px;
+	-webkit-transition-property: margin-left; /* Safari */
+    -webkit-transition-duration: 1s; /* Safari */
+    transition-property: width;
+    transition-duration: 1s;	 
+}
+
+#wrapper.toggled #main-content
+{
+	
+	position: absolute;
+	margin-left: -250px;
+	z-index: -1;
+
+
+}
+/*main class when menu is shown*/
+#navbar-options
+{
+	list-style: none;
+	color: white;
+	margin-right: 20px;
+
+}
+
+#navbar-options li 
+{
+	margin-top: 10px; 
+	padding: 7px;
+	position: relative;
+		
+}
+#navbar-options li:hover 
+{
+    border-style: solid;
+	border-top-width: 0px;
+    border-bottom-width: 0px;
+    background-color:#3b4958;
+    color: white; 
+}
+#navbar-options li a
+{
+	text-decoration: none;
+	color: rgba(255,255,255,0.75);
+	padding: 10px;
+
+}
+
+#navbar-options li a:hover
+{
+	
+}
+
+#navbar-options .selected a 
+{
+	font-weight: bold;
+	padding: 10px;
+	font-size: 18px;
+	color: #fff;
+}
+#navbar-options .selected a li
+{
+	background-color: #3b4958;
+} 
+
+#navbar-options h5
+{
+	font-weight: bold;
+}
+
+
+@media(max-width: 950px)
+{
+	
+	#sidebar-wrapper
+	{
+		height: 100%;
+	}
+	.navbar a
+{
+	margin:0;
+	padding: 0;
+}
+.navbar div
+ {
+	margin:0;
+	padding: 0;
+ }
+}
